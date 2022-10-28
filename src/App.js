@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cidade from "./components/Cidade";
+import EstadoCidade from "./components/EstadoCidade";
+import PaísesMundo from "./components/PaísesMundo";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <form>
+      <label htmlFor="países">País</label>
+       <PaísesMundo></PaísesMundo>
+        <label htmlFor="estados">Estados e cidades</label>
+        <EstadoCidade></EstadoCidade>
+        <label htmlFor="cidades">Selecione uma cidade</label>
+        <Cidade></Cidade>
+      </form>
     </div>
   );
 }
