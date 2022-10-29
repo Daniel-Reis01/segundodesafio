@@ -1,8 +1,8 @@
 import { useEffect, useState} from "react";
- import {fetchStates} from '../busca/LocalizacaoApi';
+import {fetchStates} from '../busca/LocalizacaoApi';
 
 
-const PaísesMundo = () => {
+const PaísesEstados = () => {
   const [states, setState] = useState([]);
  
     useEffect(()=>{
@@ -13,12 +13,12 @@ const PaísesMundo = () => {
     
     return (
     <select id="países">
-      <option value="">Selecione um País...</option>
+      <option value="">Selecione um Estado...</option>
       {states.map((state) =>{
-        const {country_code} = state
-        return( <option key={country_code} value={country_code}>{country_code}</option>)
+        const {sigla, nome} = state
+        return( <option key={sigla} value={sigla}>{nome}</option>)
       })}
     </select>
   );
 };
-export default PaísesMundo;
+export default PaísesEstados;
