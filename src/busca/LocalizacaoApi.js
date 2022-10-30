@@ -7,7 +7,7 @@ export const fetchStates = async () => {
     return await response.json();
 }
 export const fetchCitiesForState =(state) =>{
-    const url = `${BASE_URL}/localidades/estados`;
+    const url = `${BASE_URL}/localidades/estados/${state}/municipiosasdas`;
     const response =  fetch(url);
     return response.json();
 }
