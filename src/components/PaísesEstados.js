@@ -2,7 +2,7 @@ import { useEffect, useState} from "react";
 import {fetchStates} from '../busca/LocalizacaoApi';
 
 
-const PaísesEstados = () => {
+const PaísesEstados = ({onChange = () => {} }) => {
   const [states, setState] = useState([]);
  
     useEffect(()=>{
@@ -12,7 +12,7 @@ const PaísesEstados = () => {
       }, []);
     
     return (
-    <select id="países">
+    <select id="países" onChange={onChange}>
       <option value="">Selecione um Estado...</option>
       {states.map((state) =>{
         const {sigla, nome} = state
