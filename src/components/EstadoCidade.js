@@ -1,13 +1,13 @@
 import { useEffect, useState} from "react";
-import {fetchStates} from '../busca/LocalizacaoApi';
+import {fetchCitiesForState} from '../busca/LocalizacaoApi';
 
 
 const EstadoCidade = () => {
-  const [states, setState] = useState([]);
+  const [cities, setCities] = useState([]);
  
     useEffect(()=>{
-        fetchStates().then((states) =>{
-        setState(states);
+        fetchCitiesForState('MG').then((cities) =>{
+        setCities(cities);
         });
       }, []);
 
@@ -15,9 +15,9 @@ const EstadoCidade = () => {
   return (
     <select id="estados">
       <option value="">Selecione estado e cidade...</option>
-      {states.map((state) =>{
-        const {name} = state
-        return( <option key={name} value={name}>{name}</option>)
+      {cities.map((city) =>{
+        const {id, name} = city
+        return( <option key={id} value={id}>{name}</option>)
           })}
         </select>
   );
