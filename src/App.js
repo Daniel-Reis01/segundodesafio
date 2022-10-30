@@ -5,6 +5,14 @@ import PaísesEstados from "./components/PaísesEstados";
 
 
 function App() {
+
+  const [formValues, setFormValues] = useState({});
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    const{value, name} = e.target;
+    setFormValues({})
+  }
   return (
     <div className="container">
       <form>
