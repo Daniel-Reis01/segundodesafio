@@ -9,9 +9,9 @@ function App() {
     <div className="container">
       <form>
       <label htmlFor="países">Estados</label>
-       <PaísesEstados></PaísesEstados>
+       <PaísesEstados onChange={handleinputchange}/>
         <label htmlFor="estados">Estados e cidades</label>
-        <EstadoCidade></EstadoCidade>
+        <EstadoCidade/>
         <label htmlFor="cidades">Selecione uma cidade</label>
         <Cidade></Cidade>
       </form>
