@@ -14,8 +14,7 @@ function App() {
     const{value, name} = e.target;
     setFormValues({...formValues, [name]: value});
   }
-
-console.log(formValues);
+console.log(formValues)
 
   return (
     <div className="container">
@@ -23,7 +22,7 @@ console.log(formValues);
       <label htmlFor="países">Estados</label>
        <PaísesEstados onChange={handleInputChange}/>
         <label htmlFor="estados">Estados e cidades</label>
-        <EstadoCidade/>
+        <EstadoCidade state={formValues.state} onChange={handleInputChange} />
         <label htmlFor="cidades">Selecione uma cidade</label>
         <Cidade></Cidade>
       </form>
