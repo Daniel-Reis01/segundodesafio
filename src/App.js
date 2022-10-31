@@ -11,8 +11,8 @@ function App() {
 
   const handleInputChange = (e) => {
     e.preventDefault();
-    const{value, name} = e.target;
-    setFormValues({...formValues, [name]: value});
+    const {value, name} = e.target;
+    setFormValues({...formValues, [name]:value });
   }
 console.log(formValues)
 
