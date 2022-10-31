@@ -17,7 +17,7 @@ const EstadoCidade = ({state, onChange = () => {}}) => {
       <option value="">Selecione estado e cidade...</option>
       {cities.map((city) =>{
         const {id, name} = city
-        return( <option key={id} value={name}>{name}</option>)
+        return( <option key={id} value={id}>{name}</option>)
           })}
         </select>
   );
