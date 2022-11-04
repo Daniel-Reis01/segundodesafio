@@ -23,8 +23,7 @@ console.log(formValues)
        <PaísesEstados onChange={handleInputChange}/>
         <label htmlFor="estados">Estados e cidades</label>
         <EstadoCidade state={formValues.state} onChange={handleInputChange} />
-        <label htmlFor="cidades">Selecione uma cidade</label>
-        <Cidade></Cidade>
+      
       </form>
     </div>
   );
