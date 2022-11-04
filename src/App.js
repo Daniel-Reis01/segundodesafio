@@ -13,7 +13,7 @@ function App() {
     const {value, name} = e.target;
     setFormValues({...formValues, [name]:value });
   }
-console.log(formValues)
+console.log("formValues", formValues)
 
   return (
     <div className="container">

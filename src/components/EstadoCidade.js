@@ -6,12 +6,12 @@ const EstadoCidade = ({state, onChange = () => {}}) => {
   const [cities, setCities] = useState([]);
  
     useEffect(()=>{
-        fetchCitiesForState(state).then((cities) =>{
+        fetchCitiesForState(state).then((cities)=> {
         setCities(cities);
         });
       }, [state]);
 
-
+console.log(cities)
   return (
     <select id="estados" name="city" onChange={onChange}>
       <option value="">Selecione estado e cidade...</option>
