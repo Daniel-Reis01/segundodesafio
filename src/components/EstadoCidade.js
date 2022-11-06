@@ -16,8 +16,8 @@ console.log(cities)
     <select id="estados" name="city" onChange={onChange}>
       <option value="">Selecione estado e cidade...</option>
       {cities.map((city) => {
-        const {id, name} = city
-        return( <option key={id} value={id}>{name}</option>);
+        const {id, nome} = city
+        return( <option key={id} value={id}>{nome}</option>)
           })}
         </select>
   );
