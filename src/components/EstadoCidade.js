@@ -13,13 +13,14 @@ const EstadoCidade = ({state, onChange = () => {}}) => {
 
 console.log(cities)
   return (
-    <select id="estados" name="city" onChange={onChange}>
+    <select id="city" name="city" onChange={onChange}>
       <option value="">Selecione estado e cidade...</option>
       {cities.map((city) => {
         const {id, nome} = city
         return( <option key={id} value={id}>{nome}</option>)
           })}
         </select>
+     
   );
 };
 //adshjglfdfsnjkljcvcxvczcxzxczhgj
