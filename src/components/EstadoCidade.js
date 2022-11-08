@@ -23,5 +23,5 @@ console.log(cities);
      
   );
 };
-//adshjglfdfsnjkljcvcxvczcxzxczhgj
+//adshjglfdf
 export default EstadoCidade;
