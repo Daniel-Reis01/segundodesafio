@@ -1,18 +1,17 @@
-import { useEffect, useState} from "react";
-import {fetchCitiesForState} from '../busca/LocalizacaoApi';
+import { useEffect, useState } from "react";
+import { fetchCitiesForState } from '../busca/LocalizacaoApi';
 
 
 const EstadoCidade = ({state, onChange = () => {}}) => {
   const [cities, setCities] = useState([]);
  
-    useEffect(()=>{
+    useEffect(()=> {
       
-        // fetchCitiesForState(state).then((cities)=> {
-        // setCities(cities);
-        // });
+        fetchCitiesForState(state).then((cities)=> {
+        setCities(cities);
+        });
       }, [state]);
 
-console.log(cities);
   return (
     <select id="city" name="city" onChange={onChange}>
       <option value="">Selecione estado e cidade...</option>
@@ -24,5 +23,5 @@ console.log(cities);
      
   );
 };
-//adshjglfdfcvasdvkjbdsa
+
 export default EstadoCidade;

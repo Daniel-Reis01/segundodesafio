@@ -5,7 +5,7 @@ import {fetchStates} from '../busca/LocalizacaoApi';
 const PaísesEstados = ({onChange = () => {} }) => {
   const [states, setState] = useState([]);
  
-    useEffect(()=>{
+    useEffect(()=> {
         fetchStates().then((states) =>{
         setState(states);
         });
