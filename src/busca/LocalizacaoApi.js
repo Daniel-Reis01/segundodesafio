@@ -8,6 +8,6 @@ export const fetchStates = async () => {
 };
 export const fetchCitiesForState = (state) =>{
     if(!state) return Promise.resolve([]);
-    const url = `${BASE_URL}localidades/estados{UF}/municipios`;
+    const url = `${BASE_URL}localidades/estados/${state}/municipios`;
     return fetch(url).then(responseTojson);
 };
