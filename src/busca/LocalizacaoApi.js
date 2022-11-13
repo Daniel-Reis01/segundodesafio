@@ -7,8 +7,7 @@ export const fetchStates = async () => {
     return fetch(url).then(responseTojson);
 };
 export const fetchCitiesForState = async (state) =>{
-    // if(!state) return Promise.resolve([]);
+    if(!state) return Promise.resolve([]);
     const url = `${BASE_URL}localidades/estados/${state}/municipios`;
-    const response = await fetch(url);
-    return responseTojson(response);
+    return fetch(url).then(responseTojson);
 };
