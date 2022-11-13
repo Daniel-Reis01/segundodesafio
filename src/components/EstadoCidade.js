@@ -11,7 +11,7 @@ const EstadoCidade = ({state, onChange = () => {}}) => {
         setCities(cities);
         });
       }, [state]);
-console.log(cities);
+console.log(state);
   return (
     <select id="estados" name="" onChange={onChange}>
       <option value="">Selecione estado e cidade...</option>

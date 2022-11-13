@@ -10,7 +10,7 @@ const PaísesEstados = ({onChange = () => {} }) => {
         setState(states);
         });
       }, []);
-    
+
     return (
     <select id="países-state" name="países-state" onChange={onChange}>
       <option value="">Selecione um Estado...</option>
