@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 function App() {
 
-  const [formValues, setFormValues] = useState({ });
+  const [formValues, setFormValues] = useState({});
 
   const handleInputChange = (e) => {
     e.preventDefault();
