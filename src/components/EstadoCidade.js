@@ -27,4 +27,4 @@ console.log(cities);
 };
 
 export default EstadoCidade;
-//esta parcialmente funcional 
+//esta parcialmente funcional procurando bug no codigo 
